@@ -23,8 +23,17 @@ int main() {
         } else if (operation == '*') {
             result = a * b;
         } else if (operation == '/') {
-            result = a / b;
+            if (b==0){
+                std::cout << "Cannot divide by zero" << std::endl;
+                continue;
+            } else {
+                result = a / b;
+            }
+        } else {
+            std::cout << "Invalid operation" << std::endl;
+            continue;
         }
+
 
         std::cout << std::setprecision(3);
         std::cout << "Result = " << result << std::endl;
